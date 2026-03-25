@@ -105,7 +105,7 @@ Suurinosa tehtävästä oli itsestään selvää, joten skippaan nyt siihen koht
 
 <img width="307" height="66" alt="flag captured" src="https://github.com/user-attachments/assets/91d0f6a4-ac30-44a3-ac64-c09b36d6c470" />
 
-Tiedosto sitten näkyi omalla koneellani, kirjoitin cat komennon terminaliin, joka tulostaa mitä tahansa tekstiä mikä siinä tiedostossa on, ja sieltä tuli se lippu!
+Tiedosto sitten näkyi omalla koneellani, kirjoitin cat komennon terminaliin, joka tulostaa mitä tahansa sisältöä mikä siinä tiedostossa on terminaliin, ja sieltä tuli se lippu!
 
 ## Lähteet
 
