@@ -49,4 +49,19 @@ Testasin vielä toisinpäin varmistaakseni, että kaikki toimii kuten pitääkin
 
 Tein porttiskannauksen localhostiin ja mitään porttia ei tietenkään näkynyt, koska ei ole mitään demonia aktiivisena ja ennen kuin ihmettelet, kyllä muistin katkaista yhteyden nettiin ennen kuin tein porttiskannauksen :D.  
 
+## d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen. Analysoi ja selitä erot.
+
+<img width="431" height="38" alt="service installation" src="https://github.com/user-attachments/assets/90d838f5-7017-43c9-bc67-6abb051919c0" />
+
+Seuraavaksi latasin Apache2 ja openssh-serverin.
+
+<img width="302" height="97" alt="starting the services" src="https://github.com/user-attachments/assets/41943035-1c41-4f53-a9fe-7d2e07292b9b" />
+<img width="747" height="398" alt="ssh status" src="https://github.com/user-attachments/assets/b3d0b649-73a1-47b5-87b6-96dfce2ac9c8" />
+<img width="882" height="381" alt="apache2 status" src="https://github.com/user-attachments/assets/c5030603-445a-476a-8e4a-a2ac30d1facd" />
+
+
+Demonien latauksen jälkeen pistin ne molemmat päälle ja varmistin, että ne olivat oikeasti päällä.
+
+
+
 
