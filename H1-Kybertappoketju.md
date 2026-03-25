@@ -107,3 +107,10 @@ Suurinosa tehtävästä oli itsestään selvää, joten skippaan nyt siihen koht
 
 Tiedosto sitten näkyi omalla koneellani, kirjoitin cat komennon terminaliin, joka tulostaa mitä tahansa tekstiä mikä siinä tiedostossa on, ja sieltä tuli se lippu!
 
+## Lähteet
+
+- <a href="https://darknetdiaries.com/episode/"> Darknet Diaries</a>, 
+- <a href="https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf"> Lockheedmartin</a>,
+- <a href="https://www.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_04/"> Oreilly</a>,
+- <a href="https://www.finlex.fi/fi/oikeuskaytanto/korkein-oikeus/ennakkopaatokset/2003/36#OT0_OT3"> Finlex</a>,
+- <a href="https://terokarvinen.com/tunkeutumistestaus/#h1-kybertappoketju">Tero Karvinen</a>
