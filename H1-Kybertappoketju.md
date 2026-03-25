@@ -73,9 +73,37 @@ Huomasin, että Nmap vain totesi kaikkien 1000 testatun portin olevan kiinni. Ko
 Nmap löysikin heti kaksi avointa porttia: 22 (SSH) ja 80 (HTTP). Koska käytin -A -lippua, se ei vain kertonut porttien olevan auki, vaan kaivoi esiin tarkat versiot siellä pyörivistä ohjelmista (OpenSSH ja Apache). Tämä syvempi tutkinta vei vähän enemmän aikaa, melkein 10 sekuntia.
 
 - nmap: Itse skannausohjelman käynnistys.
-- -T4: Nopeusasetus, joka käskee ohjelman toimia reippaalla vauhdilla. Nopeus voi mennä T0 (Erittäin hidas mutta möys vaikeampi havaita) - T5 , mutta mitä nopeampaa asetusta käytetään, sitä todennäköisemmin erroreita tulee, tätä kannattaa siis käyttää jos on hyvä yhteys internettiin tai et halua nmpain odottavan liian pitkään jotain vastausta.
+- -T4: Nopeusasetus, joka käskee ohjelman toimia reippaalla vauhdilla. Nopeus voi mennä T0 (Erittäin hidas mutta möys vaikeampi havaita) -T5, mutta mitä nopeampaa asetusta käytetään, sitä todennäköisemmin erroreita tulee, tätä kannattaa siis käyttää jos on hyvä yhteys internettiin tai et halua nmpain odottavan liian pitkään jotain vastausta.
 - -A: Aggressiivinen tila, joka tonkii esiin syvälliset tiedot, kuten palveluiden tarkat versiot ja käyttöjärjestelmän. Tämä on kuitenkin aika "äänekäs" joten palomuurit todennäköisesti huomaavat jotain, mutta tämä on tosi hyvä jos pitää saada paljon tietoa.
 - localhost: Tämä on se itse kohde eli tässä tehtävässä se nyt sattui olemaan oma tietokoneeni tai no siis virtuaalikoneeni, mutta se voi olla ihan mikä tahansa muu osoite. 
 
 ## e) Ratkaise vapaavalintainen kone HackTheBoxista
+
+<img width="1387" height="226" alt="image" src="https://github.com/user-attachments/assets/f4eae804-0697-4d5f-ba13-91cf3745c583" />
+
+Päätin tehdä "Dancing" koneen HTB sivulta. 
+
+Suurinosa tehtävästä oli itsestään selvää, joten skippaan nyt siihen kohtaan mikä vaati vähän miettimistä, eli root flagin saaminen...
+
+<img width="817" height="252" alt="shares on smb" src="https://github.com/user-attachments/assets/ced3a7d1-ebf8-4ffc-a873-26db34daedc1" />
+
+- Ensiksi listasin kaiken mitä voin löytää koneen ip osoitteesta smb yhteydellä. Siellä näkyy "WorkShares", joka ei vaadi mitään käyttäjätunnusta eikä salasanaa.
+
+<img width="602" height="92" alt="smb connection" src="https://github.com/user-attachments/assets/d489c250-f7f3-4624-879c-1d0d9f7953bc" />
+
+- Sitten otin smb yhteyden koneeni ip osoitteeseen.
+
+<img width="681" height="123" alt="smb list" src="https://github.com/user-attachments/assets/07277e52-73fd-485b-9165-f89d0b1cf13f" />
+
+- Seuraavaksi kirjoitin "L" komennon joka tarkoittaa listaa, niin pystyn näkemään mitä koneelta löytyy...Siellä oli kansio James.P, jossa oli root flag.txt tiedosto.
+
+<img width="905" height="86" alt="smb get" src="https://github.com/user-attachments/assets/e1916947-3218-492f-a73a-c8ace631d96c" />
+
+- Sitten kirjoitin "get" komennon, joka siis lataa tämän tiedoston omalle koneelleni. Sitten kirjoitin "exit" komennon, jotta pääsen takaisin omalle koneelleni.
+
+<img width="695" height="440" alt="file shown on my pc" src="https://github.com/user-attachments/assets/044ad51b-c113-4550-bbb9-50b61d4d5dc8" />
+
+<img width="307" height="66" alt="flag captured" src="https://github.com/user-attachments/assets/91d0f6a4-ac30-44a3-ac64-c09b36d6c470" />
+
+Tiedosto sitten näkyi omalla koneellani, kirjoitin cat komennon terminaliin, joka tulostaa mitä tahansa tekstiä mikä siinä tiedostossa on, ja sieltä tuli se lippu!
 
