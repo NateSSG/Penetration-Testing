@@ -62,6 +62,20 @@ Seuraavaksi latasin Apache2 ja openssh-serverin.
 
 Demonien latauksen jälkeen pistin ne molemmat päälle ja varmistin, että ne olivat oikeasti päällä.
 
+<img width="910" height="411" alt="nmap scan results" src="https://github.com/user-attachments/assets/880641d4-aaba-47fa-aecd-188d732bdd1f" />
+
+Seuraavaksi tein porttiskannauksen uudestaan ja kappas sieltä löytyi kaksi porttia, joita nämä demonit siis käyttää.
+
+## Erot
+
+Huomasin, että Nmap vain totesi kaikkien 1000 testatun portin olevan kiinni. Koska mitään tutkittavaa ei ollut, skannaus oli ohi reilussa parissa sekunnissa (2.37 s). Nmap ei myöskään pystynyt kunnolla tunnistamaan käyttöjärjestelmääni, koska mikään portti ei vastannut sille.
+
+Nmap löysikin heti kaksi avointa porttia: 22 (SSH) ja 80 (HTTP). Koska käytin -A -lippua, se ei vain kertonut porttien olevan auki, vaan kaivoi esiin tarkat versiot siellä pyörivistä ohjelmista (OpenSSH ja Apache). Tämä syvempi tutkinta vei vähän enemmän aikaa, melkein 10 sekuntia.
+
+- nmap: Itse skannausohjelman käynnistys.
+- -T4: Nopeusasetus, joka käskee ohjelman toimia reippaalla vauhdilla. Nopeus voi mennä T0 - T5 , mutta mitä nopeampaa asetusta käytetään, sitä todennäköisemmin erroreita tulee, tätä kannattaa siis käyttää jos on hyvä yhteys internettiin.
+- -A: Aggressiivinen tila, joka tonkii esiin syvälliset tiedot, kuten palveluiden tarkat versiot ja käyttöjärjestelmän. Tämä on kuitenkin aika "äänekäs" joten palomuurit todennäköisesti huomaavat jotain, mutta tämä on tosi hyvä jos pitää saada paljon tietoa.
+- localhost: Tämä on se itse kohde eli tässä tehtävässä se nyt sattui olemaan oma tietokoneeni tai no siis virtuaalikoneeni, mutta se voi olla ihan mikä tahansa muu osoite. 
 
 
 
