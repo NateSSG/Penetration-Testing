@@ -13,3 +13,31 @@
 ### Network: NAT
 
 ## Tiivistys
+
+## Asenna Metasploitable 2 virtuaalikoneeseen.
+
+Asensin Metasploitablen <a href="https://www.rapid7.com/products/metasploit/metasploitable"> tältä</a>
+sivulta. Asennuksessa ei ilmennyt mitään ongelmaa, se oli tosi suoraviivaista kunhan koneelta löytyi VMware.
+
+<img width="1918" height="1023" alt="metasploitable website where i downloaded it from" src="https://github.com/user-attachments/assets/f15160ad-6d33-4db0-938f-73f3fd690bbd" />
+
+## Tee Kalin ja Metasploitablen välille virtuaaliverkko. Jos säätelet VirtualBoxista / Harjoittelemme omassa virtuaaliverkossa, jossa on Kali ja Metaspoitable. Osoita testein, että 1) koneet eivät saa yhteyttä Internetiin 2) Koneet saavat yhteyden toisiinsa.
+
+Tein tämän tehtävän VMwarella niin se meni vähän eri tavalla. Sain molemmat koneet yhdistettyä jos verkkokortit olivat asetettu host-onlyyn. Jos kalin täytyi yhdistyä nettiin se piti vaihtaa NAT:iin, mutta muuten kaikki toimi niin kuin pitikin
+
+<img width="703" height="436" alt="metasploitable address" src="https://github.com/user-attachments/assets/8c4c4694-4230-4dab-8279-fff4343938ae" />
+
+<img width="712" height="426" alt="network adapter on host only to not have access to the browser" src="https://github.com/user-attachments/assets/19f2ced9-a199-40d9-b279-e67f835a75c0" />
+
+<img width="710" height="617" alt="network adapter on NAT to be able to ping" src="https://github.com/user-attachments/assets/ef3503cf-4877-40b0-ac3f-c71bfb0e3cfe" />
+
+<img width="571" height="328" alt="ping the metasploit" src="https://github.com/user-attachments/assets/0ce3e38d-13e0-4ae5-ac89-11d5f6d50b44" />
+
+## Etsi Metasploitable porttiskannaamalla (nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen weppipalvelimen etusivulla lukee Metasploitable.
+
+
+<img width="763" height="568" alt="metasploitable web page on the vm" src="https://github.com/user-attachments/assets/52f70f7d-a5d3-4508-b0c0-0ead734d688d" />
+
+
+
+
