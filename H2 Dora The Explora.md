@@ -35,9 +35,14 @@ Tein tämän tehtävän VMwarella niin se meni vähän eri tavalla. Sain molemma
 
 ## Etsi Metasploitable porttiskannaamalla (nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen weppipalvelimen etusivulla lukee Metasploitable.
 
+<img width="661" height="335" alt="sn scan" src="https://github.com/user-attachments/assets/bec91330-51fb-468f-ac10-58caf3ad2470" />
+
+<img width="661" height="457" alt="host is up" src="https://github.com/user-attachments/assets/3713a0c8-b795-466c-b574-15000e5da9b1" />
 
 <img width="763" height="568" alt="metasploitable web page on the vm" src="https://github.com/user-attachments/assets/52f70f7d-a5d3-4508-b0c0-0ead734d688d" />
 
+Komennolla etsittiin aktiivisia laitteita lähiverkosta ilman porttiskannausta. Skannauksen tuloksena löytyi useita aktiivisia IP-osoitteita, joista yksi oli 192.168.18.128.
 
+Tämän jälkeen varmistin oikean kohteen avaamalla selaimella osoitteen http://192.168.18.128. Sivulla näkyi teksti "Metasploitable", mikä vahvisti, että kyseessä oli Metasploitable-kone.
 
 
