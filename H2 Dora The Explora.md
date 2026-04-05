@@ -10,7 +10,7 @@
 
 ### Disk: 35 GB
 
-### Network: NAT
+### Network: NAT / Host-Only
 
 ## Tiivistelmä
 
