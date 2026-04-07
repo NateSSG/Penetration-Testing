@@ -80,10 +80,29 @@ Nyt tulee päivän vaikein osuus tai no minulla ainakin kesti noin tunti tämän
 
 <img width="416" height="378" alt="SITES" src="https://github.com/user-attachments/assets/37554fde-ef7d-4908-9dac-29ed535a4721" />
 
+Päätin valita portswiggerin ja vuhuu mä sain kuvan löydettyä! 
 
+<img width="982" height="520" alt="portswig image" src="https://github.com/user-attachments/assets/02f90d4c-0ed8-4544-8fb3-31de4ace0c47" />
 
+## Cross Site Scripting (XSS)
 
+### C) Reflected XSS into HTML context with nothing encoded
 
+<img width="1725" height="566" alt="cross-site scripting" src="https://github.com/user-attachments/assets/fdf3f3f5-7e36-4895-93dd-65776e5ad644" />
+
+### D) Stored XSS into HTML context with nothing encoded
+
+<img width="767" height="657" alt="cross-site scripting2" src="https://github.com/user-attachments/assets/fa852d17-80e9-41e2-9eed-5b167e630c18" />
+
+<img width="1527" height="511" alt="cross-site scripting2 passed" src="https://github.com/user-attachments/assets/5bc4b112-1fbf-43e3-9c1b-abfbf8eb407a" />
+
+## Path traversal
+
+### F) File path traversal, simple case. Laita tarvittaessa Zapissa kuvien sieppaus päälle. 
+
+Tässä tehtävässä valitsin tuon web security kansion, jossa oli file-path-traversal kansio. Sen sisltä löytyi GET pyyntö tiedosto joka siis muodostui kun avattiin se portswiggerin tuotteen sivu. Seuraavaksi piti manipuloida se siten että saadaan tärkeitä tietoja selville.
+
+<img width="1708" height="911" alt="manipulate" src="https://github.com/user-attachments/assets/02627526-7d25-4d98-ae20-317449284acb" />
 
 
 
