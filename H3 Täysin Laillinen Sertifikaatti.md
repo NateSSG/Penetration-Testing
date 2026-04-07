@@ -20,6 +20,8 @@
 
 Avattuani ZAP sovelluksen, varmistin että proxy oli localhost ja portissa 8080.
 
+Sen jälkeen tallensin sertifikaatin koneelle ja importtasin sen firefoxiin.
+
 <img width="751" height="577" alt="save the cert" src="https://github.com/user-attachments/assets/ca20b064-34dd-4088-82b1-d7812e23c30e" />
 
 <img width="628" height="356" alt="save the cert into a folder" src="https://github.com/user-attachments/assets/d091dc6d-909e-4fcc-aea0-e246203f3e4e" />
@@ -32,8 +34,6 @@ Avattuani ZAP sovelluksen, varmistin että proxy oli localhost ja portissa 8080.
 
 <img width="751" height="287" alt="trust is selected" src="https://github.com/user-attachments/assets/c52ac556-6fcd-4e6c-8249-ab77d3f395fa" />
 
-Sen jälkeen tallensin sertifikaatin koneelle ja importtasin sen firefoxiin.
-
 Seuraavaksi testattiin että ilmestyykö mitään tuonne history terminaliin.
 
 <img width="1305" height="473" alt="select manual explore" src="https://github.com/user-attachments/assets/5b437eed-99d5-4d0f-a485-dc7bc02402f5" />
@@ -44,8 +44,25 @@ Seuraavaksi testattiin että ilmestyykö mitään tuonne history terminaliin.
 
 <img width="1722" height="188" alt="proxy result" src="https://github.com/user-attachments/assets/938b4f1c-23b8-4f08-a191-3d23531efd84" />
 
+Kuten huomaatte, terminalissa näkyy juuri haettua sivua eli http://example.com/
 
+## b) Kettumaista. Asenna "FoxyProxy Standard" Firefox Addon, ja lisää ZAP proxyksi siihen
 
+FoxyProxyn asennus oli tuskallista 😂, meni hetki tajuta mitä tekee mikäkin, mutta päästiin kuitenkin maaliin.
+
+Ensiksi piti lisää se FoxyProxy firefoxiin 
+<img width="1267" height="448" alt="foxyproxy" src="https://github.com/user-attachments/assets/4240f015-f3b3-41aa-816e-14978783c86b" />
+
+Seuraavaksi avasin FoxyProxyn asetukset
+<img width="295" height="328" alt="foxyproxy select options" src="https://github.com/user-attachments/assets/a0e8edcc-0717-481c-aa38-581b97ae4892" />
+
+Sitten muokkasin sitä proxyä antamalla sille samat asetukset mitkä oli zapissa eli localhost ja portti 8080 että kaikki mitä foxyproxy hakee menee zappiin.
+
+<img width="748" height="536" alt="foxyproxy config" src="https://github.com/user-attachments/assets/54bb0472-e66e-4641-b4f6-eb72fc038fe6" />
+
+Seuraavaksi piti määritellä Proxy by Pattern tämä siis filteröi kaiken muun liikenteen pois paitsi ne jotka on määritelty tänne. Testien vuoksi olin laittanut aika monta eri osoitetta.
+
+<img width="1160" height="227" alt="foxyproxyyyyy" src="https://github.com/user-attachments/assets/537eb1cf-e2da-44a7-8334-f83c2ca86eec" />
 
 
 
