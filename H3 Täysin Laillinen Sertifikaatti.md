@@ -104,5 +104,20 @@ Tässä tehtävässä valitsin tuon web security kansion, jossa oli file-path-tr
 
 <img width="1708" height="911" alt="manipulate" src="https://github.com/user-attachments/assets/02627526-7d25-4d98-ae20-317449284acb" />
 
+Sitten muutin sen "filename" kohdan 
+
+<img width="1553" height="270" alt="get image customization" src="https://github.com/user-attachments/assets/07fa5431-ff23-4788-9317-24a7659aca3f" />
+
+Jotta nähdään mitä kaikkea haavoittuvuuksia me saatiin meidän pitää vaihtaa tuo "Body" tekstiksi
+
+<img width="768" height="177" alt="select text" src="https://github.com/user-attachments/assets/e6d39eef-8adb-4e41-8ad4-7a65fe7e8ded" />
+
+<img width="877" height="422" alt="it displays all the info needed" src="https://github.com/user-attachments/assets/a6affb70-1972-48a7-872a-91ea300e96d4" />
+
+<img width="1001" height="452" alt="lab solveeeed" src="https://github.com/user-attachments/assets/28a823c3-6126-4d3a-b22c-5d1db7d0876d" />
+
+
+
+
 
 
