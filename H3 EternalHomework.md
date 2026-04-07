@@ -69,6 +69,10 @@ Hyökkäys onnistui välittömästi ja avasi suoran komentoriviyhteyden (shell) 
 <img width="893" height="577" alt="valuable info" src="https://github.com/user-attachments/assets/6dc1a1e8-f6e9-4de8-8c01-4893a42b249c" />
 <img width="682" height="382" alt="proper ifconfig" src="https://github.com/user-attachments/assets/dbd8c8d8-172a-4fdf-bb55-eceaff12a4f6" />
 
+<img width="437" height="142" alt="commaaands in meterpreter" src="https://github.com/user-attachments/assets/0b3b8510-8789-4573-8e7b-762bc116d0e1" />
+
+<img width="596" height="695" alt="seeing insideee" src="https://github.com/user-attachments/assets/e4463874-d465-49e3-8a0e-b7b66f6e33f8" />
+
 ## G) Lateral movement tiedon kerääminen
 
 Keräsin kohteesta tietoja, joita voisi käyttää verkossa etenemiseen:
@@ -98,6 +102,7 @@ Syy oli se, että minulla ei ollut payloadia valittu, joten kävin katsomassa mi
 
 <img width="760" height="636" alt="payloads" src="https://github.com/user-attachments/assets/eb0e104e-a044-4535-bc85-39262b2a208a" />
 <img width="748" height="822" alt="2nd session" src="https://github.com/user-attachments/assets/50499840-842a-4841-bd40-edd550a2335f" />
+
 
 
 Asetin payloadiksi cmd/unix/reverse_perl ja määrittelin LHOST (oma IP). Tämä avasi toisen istunnon kohteeseen
@@ -173,4 +178,19 @@ Tämä haku palautti tiedon, että IP-osoitteessa 192.168.18.128 ja portissa 21/
 <img width="753" height="443" alt="data outt-2" src="https://github.com/user-attachments/assets/6eb83f3b-a62e-48a9-afd8-79aebfc38198" />
 
 <img width="608" height="435" alt="version file" src="https://github.com/user-attachments/assets/58b1f8b6-f380-4bf7-aae2-47f6152e9a4f" />
+
+## I) Attaack! – MITRE ATT&CK analyysi
+
+Tässä harjoituksessa suoritetut toimenpiteet ja hyökkäysvaiheet voidaan kartoittaa suoraan kansainväliseen **MITRE ATT&CK** viitekehykseen. Analyysi osoittaa, miten yksittäiset komennot muodostavat loogisen hyökkäysketjun.
+
+| Taktiikka (Tactic) | Tekniikka (Technique) | ID | Kuvaus harjoituksesta |
+| :--- | :--- | :--- | :--- |
+| **Reconnaissance** | Active Scanning | T1595 | Suoritin kohdejärjestelmän tiedustelun käyttämällä `db_nmap` ja `-sV` -lippuja haavoittuvien palveluiden tunnistamiseksi. |
+| **Discovery** | Network Service Discovery | T1046 | Analysoin skannauksen tuloksia (esim. `vsftpd 2.3.4` ja `UnrealIRCd`), mikä toimi pivot-pisteenä hyökkäykselle. |
+| **Initial Access** | Exploit Public-Facing Application | T1190 | Hyödynsin tunnettuja takaovia (backdoor) päästäkseni järjestelmään sisälle ilman käyttäjätunnuksia. |
+| **Execution** | Command and Scripting Interpreter: Unix Shell | T1059.004 | Ajoin komentoja suoraan uhrin shell-ympäristössä ja käytin `reverse_perl` -payloadia yhteyden muodostamiseen. |
+| **Discovery** | System Information Discovery | T1082 | Keräsin tietoa järjestelmästä (kernel-versio, verkkorajapinnat) komennoilla `sysinfo` ja `ifconfig`. |
+| **Credential Access** | OS Credential Dumping | T1003 | Luin `/etc/shadow` -tiedoston sisällön pääkäyttäjänä, mikä mahdollisti salasanojen tiivisteiden haltuunoton. |
+
+
 
