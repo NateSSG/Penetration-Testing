@@ -140,11 +140,13 @@ Koska reaaliaikainen loki puuttui, palautin tilanteen simuloimalla script-työka
 
 - Metasploit-historia: Hain kaikki hyökkäysvaiheet suoraan Metasploitin sisäisestä lokista (cat ~/.msf4/history >> log001.txt).
 
-Tämä yhdistetty lokitiedosto vastaa sisällöltään script-työkalun tuottamaa dataa, sisältäen sekä konfigurointivaiheet että suoritetut exploitit. 
+<img width="382" height="52" alt="log file 3" src="https://github.com/user-attachments/assets/8b98d8ab-47ed-4198-aef2-24efda28de3a" />
+<img width="211" height="66" alt="log file 2" src="https://github.com/user-attachments/assets/a52ea79d-9e66-4e09-a2eb-1768eeb8686a" />
 
-<img width="211" height="103" alt="log file 2" src="https://github.com/user-attachments/assets/2df1e648-158a-4964-ba43-193122a041ad" />
+<img width="376" height="47" alt="reaaaad" src="https://github.com/user-attachments/assets/8d32b1b7-3d12-49a4-b801-635120705739" />
+<img width="621" height="706" alt="reaaaad 2" src="https://github.com/user-attachments/assets/68e380fb-b811-4bc1-a855-f43fe6e43f44" />
 
-<img width="752" height="816" alt="log file" src="https://github.com/user-attachments/assets/488172c8-3cec-4a56-be8b-6fbabcd60d8b" />
+Tämä yhdistetty lokitiedosto vastaa sisällöltään script-työkalun tuottamaa dataa, sisältäen sekä konfigurointivaiheet että suoritetut exploitit.
 
 
 
