@@ -129,5 +129,23 @@ Päivitin perusyhteyden Meterpreter-sessioon (shell_to_meterpreter). Meterpretri
 
 <img width="596" height="695" alt="seeing insideee" src="https://github.com/user-attachments/assets/e4463874-d465-49e3-8a0e-b7b66f6e33f8" />
 
+## j) Istunnon dokumentointi ja tekniset haasteet
+
+Harjoituksen alussa tavoitteena oli käyttää script -fa log001.txt -työkalua istunnon reaaliaikaiseen nauhoittamiseen. Teknisen erehdyksen vuoksi työkalu ei kuitenkaan tallentanut alkuvaiheen msfconsole-tapahtumia odotetulla tavalla.
+
+Vaihtoehtoinen menetelmä (Simulaatio):
+Koska reaaliaikainen loki puuttui, palautin tilanteen simuloimalla script-työkalun toimintaa yhdistämällä kaksi tietolähdettä:
+
+- Linux-historia: Tallensin terminaalikomennot (history > log001.txt).
+
+- Metasploit-historia: Hain kaikki hyökkäysvaiheet suoraan Metasploitin sisäisestä lokista (cat ~/.msf4/history >> log001.txt).
+
+Tämä yhdistetty lokitiedosto vastaa sisällöltään script-työkalun tuottamaa dataa, sisältäen sekä konfigurointivaiheet että suoritetut exploitit. 
+
+<img width="211" height="103" alt="log file 2" src="https://github.com/user-attachments/assets/2df1e648-158a-4964-ba43-193122a041ad" />
+
+<img width="752" height="816" alt="log file" src="https://github.com/user-attachments/assets/488172c8-3cec-4a56-be8b-6fbabcd60d8b" />
+
+
 
 
