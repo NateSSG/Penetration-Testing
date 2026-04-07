@@ -76,6 +76,10 @@ Terminalissa ei näkynyt google.com:ia joten voidaan todeta että filtteri toimi
 
 <img width="756" height="302" alt="no google" src="https://github.com/user-attachments/assets/a951e505-baa5-482b-9971-e97a70a04ae5" />
 
+Nyt tulee päivän vaikein osuus tai no minulla ainakin kesti noin tunti tämän löytämisessä 😅. Elikkäs tehtäväannossa luki että piti näyttää zapin löytävän kuvia. No kun katsoin sitä historiaa siellä ei ollut mitään...ei yhtään mitään. Luulin että FoxyProxyssa oli jotain ongelmia, testasin koko prosessin uudestaan ei mikään auttanut...kunnes katsoin tuota sivupalkkia, jossa lukee "Sites". Klikkasin sitä ja kappas siellä näkyy kansioita joissa on sivujen nimet jossa olen käynyt. 
+
+<img width="416" height="378" alt="SITES" src="https://github.com/user-attachments/assets/37554fde-ef7d-4908-9dac-29ed535a4721" />
+
 
 
 
