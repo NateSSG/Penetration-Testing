@@ -64,5 +64,15 @@ Seuraavaksi piti määritellä Proxy by Pattern tämä siis filteröi kaiken muu
 
 <img width="1160" height="227" alt="foxyproxyyyyy" src="https://github.com/user-attachments/assets/537eb1cf-e2da-44a7-8334-f83c2ca86eec" />
 
+Testasin toimiiko meidän määritelty filtteri. Etsin hakukoneesta portswiggerin sekä google.com:in
+
+<img width="760" height="907" alt="portswig search" src="https://github.com/user-attachments/assets/6cf6dd4d-dac2-48bb-ab03-d67af882754e" />
+
+Terminalissa ei näkynyt google.com:ia joten voidaan todeta että filtteri toimii kuten pitääkin 👍.
+
+<img width="756" height="302" alt="no google" src="https://github.com/user-attachments/assets/a951e505-baa5-482b-9971-e97a70a04ae5" />
+
+
+
 
 
