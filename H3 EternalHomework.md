@@ -103,7 +103,19 @@ Syy oli se, että minulla ei ollut payloadia valittu, joten kävin katsomassa mi
 Asetin payloadiksi cmd/unix/reverse_perl ja määrittelin LHOST (oma IP). Tämä avasi toisen istunnon kohteeseen
 
 
-## i) Meterpretrin ominaisuudet
+## i) Meterpretrin toiminta ja  ominaisuudet
+
+### Istunnon taustauttaminen
+
+Painoin Ctrl+Z, mikä pysäyttää aktiivisen yhteyden ja palauttaa hallinnan Metasploit-konsoliin sulkematta itse yhteyttä. Tämä on välttämätöntä, jotta voimme ajaa "post-exploitation"-moduuleita istuntoa vasten.
+
+<img width="747" height="106" alt="tausta meterpreter" src="https://github.com/user-attachments/assets/c31669be-3333-4394-8934-c5ff691b6f80" />
+
+### Moduulin valinta:
+
+Otin käyttöön moduulin post/multi/manage/shell_to_meterpreter. Tämän moduulin tarkoitus on lähettää uhrin koneelle Meterpreter-payload, joka tarjoaa huomattavasti enemmän ominaisuuksia kuin pelkkä perinteinen Linux-shell.
+
+<img width="763" height="510" alt="meterpreter activated" src="https://github.com/user-attachments/assets/f0852ba2-686a-45d0-adde-0217bf144551" />
 
 Päivitin perusyhteyden Meterpreter-sessioon (shell_to_meterpreter). Meterpretrillä demonstroin:
 
@@ -112,3 +124,10 @@ Päivitin perusyhteyden Meterpreter-sessioon (shell_to_meterpreter). Meterpretri
 - getuid: Vahvisti root-oikeudet.
 
 - hashdump: Yritin tiivisteiden ajoa, mutta Linux-ympäristössä hyödynsin manuaalista /etc/shadow-lukua tiedon keräämiseen.
+
+<img width="437" height="142" alt="commaaands in meterpreter" src="https://github.com/user-attachments/assets/0b3b8510-8789-4573-8e7b-762bc116d0e1" />
+
+<img width="596" height="695" alt="seeing insideee" src="https://github.com/user-attachments/assets/e4463874-d465-49e3-8a0e-b7b66f6e33f8" />
+
+
+
