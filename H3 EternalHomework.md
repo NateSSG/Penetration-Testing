@@ -192,5 +192,10 @@ Tässä harjoituksessa suoritetut toimenpiteet ja hyökkäysvaiheet voidaan kart
 | **Discovery** | System Information Discovery | T1082 | Keräsin tietoa järjestelmästä (kernel-versio, verkkorajapinnat) komennoilla `sysinfo` ja `ifconfig`. |
 | **Credential Access** | OS Credential Dumping | T1003 | Luin `/etc/shadow` -tiedoston sisällön pääkäyttäjänä, mikä mahdollisti salasanojen tiivisteiden haltuunoton. |
 
-
-
+## Lähteet
+https://terokarvinen.com/tunkeutumistestaus/#taysin-laillinen-sertifikaatti
+http://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide/
+https://attack.mitre.org/
+https://attack.mitre.org/tactics/TA0003/
+https://attack.mitre.org/techniques/T1189/
+https://attack.mitre.org/resources/faq/
