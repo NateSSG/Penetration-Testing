@@ -37,6 +37,8 @@ Tämä komento suorittaa Nmap-skannauksen ja tallentaa tulokset suoraan Metasplo
 
 Kohteesta löytyi useita historiallisesti merkittäviä haavoittuvuuksia. Valitsin vsftpd 2.3.4 -palvelun. Tämä on kuuluisa "supply chain" -hyökkäyksen kohde vuodelta 2011, jolloin ohjelmiston lähdekoodiin lisättiin luvatta takaovi (backdoor), joka aktivoituu tietyllä merkkijonolla (:)) käyttäjänimessä.
 
+<img width="1003" height="248" alt="search vsftpd" src="https://github.com/user-attachments/assets/70c3c910-1c5c-4a3f-aa91-06d1020a7347" />
+
 ## E) Nmap-tiedostojen (-oA) ja Metasploit-tietokannan vertailu
 
 ### Vertailin kahta eri tallennustapaa:
