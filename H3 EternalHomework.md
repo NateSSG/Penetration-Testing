@@ -164,7 +164,7 @@ Tiedostojen keskittäminen mahdollistaa tehokkaan tiedonhaun koko projektin data
 
 Käytin grep -r -komentoa löytääkseni kriittisen hyökkäyspisteen (Pivot Point) kootusta datasta:
 ```bash
-grep -r "vsftpd 2.3.4" .
+grep -r "vsftpd 2.3.4"
 ```
 Tämä haku palautti tiedon, että IP-osoitteessa 192.168.18.128 ja portissa 21/tcp pyörii haavoittuva palvelu. Samalla skannausdatasta (Nmap-tiedosto) varmistui laitteen MAC-osoite: 00:0C:29:BA:D6:0F.
 
