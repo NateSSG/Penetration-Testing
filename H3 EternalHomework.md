@@ -148,6 +148,28 @@ Koska reaaliaikainen loki puuttui, palautin tilanteen simuloimalla script-työka
 
 Tämä yhdistetty lokitiedosto vastaa sisällöltään script-työkalun tuottamaa dataa, sisältäen sekä konfigurointivaiheet että suoritetut exploitit.
 
+## K) Pivot point ja tiedonhallinta
 
+Tässä vaiheessa kaikki harjoituksen aikana kertyneet tiedostot kerättiin yhteen raportointikansioon (~/metasploit_lab_raportti). Kansio sisältää seuraavat artefaktit:
+
+- log001.txt: Koottu komentohistoria (Linux ja Metasploit).
+
+- metasploit_scan_results.nmap / .gnmap / .xml: Nmap-skannauksen eri tallennusmuodot.
+
+- metasploitable_scan.xml: Metasploit-tietokannan export-tiedosto.
+
+Tiedostojen keskittäminen mahdollistaa tehokkaan tiedonhaun koko projektin datasta yhdellä komennolla.
+
+### Tekninen haku (grep -r)
+
+Käytin grep -r -komentoa löytääkseni kriittisen hyökkäyspisteen (Pivot Point) kootusta datasta:
+```bash
+grep -r "vsftpd 2.3.4" .
+```
+Tämä haku palautti tiedon, että IP-osoitteessa 192.168.18.128 ja portissa 21/tcp pyörii haavoittuva palvelu. Samalla skannausdatasta (Nmap-tiedosto) varmistui laitteen MAC-osoite: 00:0C:29:BA:D6:0F.
+
+<img width="606" height="213" alt="file thingy" src="https://github.com/user-attachments/assets/7210ee60-7e59-48c1-883d-99a3d852b888" />
+
+<img width="747" height="367" alt="data outt" src="https://github.com/user-attachments/assets/d8cb9d56-9772-48ec-bf51-42e158473b94" />
 
 
