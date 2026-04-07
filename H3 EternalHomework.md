@@ -172,4 +172,5 @@ Tämä haku palautti tiedon, että IP-osoitteessa 192.168.18.128 ja portissa 21/
 
 <img width="753" height="443" alt="data outt-2" src="https://github.com/user-attachments/assets/6eb83f3b-a62e-48a9-afd8-79aebfc38198" />
 
+<img width="608" height="435" alt="version file" src="https://github.com/user-attachments/assets/58b1f8b6-f380-4bf7-aae2-47f6152e9a4f" />
 
