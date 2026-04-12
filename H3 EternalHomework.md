@@ -212,13 +212,12 @@ Tässä harjoituksessa suoritetut toimenpiteet ja hyökkäysvaiheet voidaan kart
 | **Credential Access** | OS Credential Dumping | T1003 | Luin `/etc/shadow` -tiedoston sisällön pääkäyttäjänä, mikä mahdollisti salasanojen tiivisteiden haltuunoton. |
 
 ## Lähteet
-https://terokarvinen.com/tunkeutumistestaus/#taysin-laillinen-sertifikaatti
-http://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide/
-https://attack.mitre.org/
-https://attack.mitre.org/tactics/TA0003/
-https://attack.mitre.org/techniques/T1189/
-https://attack.mitre.org/resources/faq/
-https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-19
-https://nmap.org/docs.html
 
-
+- <a href="https://terokarvinen.com/tunkeutumistestaus/#taysin-laillinen-sertifikaatti">Tero Karvinen</a>
+- <a href="http://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide/">Metasploitable Exploitability Guide</a>
+- <a href="https://attack.mitre.org/">Mitre</a>
+- <a href="https://attack.mitre.org/tactics/TA0003/">Mitre Tactics</a>
+- <a href="https://attack.mitre.org/techniques/T1189/">Mitre Techniques</a>
+- <a href="https://attack.mitre.org/resources/faq/">Mitre Resources FAQ</a>
+- <a href="https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-19">O'reilly Mastering Metasploit</a>
+- <a href="https://nmap.org/docs.html">Nmap docs</a>
