@@ -14,6 +14,23 @@
 
 ## Tiivistelmä
 
+Jaswal (2020) jakaa ammattimaisen penetraatiotestauksen useisiin kriittisiin vaiheisiin PTES (Penetration Testing Execution Standard) -standardin mukaisesti. Metasploit ei ole vain yksittäinen työkalu, vaan kokonainen ekosysteemi, joka tukee testaajaa prosessin jokaisessa vaiheessa.
+
+- Esivalmistelut (Preinteractions): Tässä vaiheessa määritellään testin laajuus (scope), tavoitteet ja säännöt (Rules of Engagement). On kriittistä sopia, mitä kohteita saa testata, saako käyttää DoS-hyökkäyksiä ja mihin kellonaikaan testit suoritetaan, jotta vältytään tuotantoympäristön häiriöiltä.
+
+- Tiedonkeruu (Intelligence Gathering): Tämä on testin tärkein vaihe, johon kuluu 40–60 % ajasta. Se sisältää aktiivista ja passiivista tiedonhakua (footprinting), avoimien porttien skannausta ja palveluiden tunnistamista. Oikein suoritettu tiedonkeruu auttaa valitsemaan täsmälliset hyökkäysvektorit ja säästää aikaa.
+
+- Uhka-analyysi (Threat Modeling): Kerätyn tiedon perusteella mallinnetaan mahdolliset hyökkäysreitit. Tässä vaiheessa arvioidaan, mitkä organisaation resurssit ovat kriittisimpiä ja mitkä uhat kohdistuvat niihin todennäköisimmin.
+
+- Haavoittuvuusanalyysi: Tunnistetaan kohteesta heikkoudet (kuten vanhentuneet ohjelmistoversiot), joita voidaan hyödyntää pääsyn saamiseksi.
+
+### Mitä nmap -sn tekee?
+Lähteenä käytetyn Jaswalin (2020) tekstin ja Nmap-dokumentaation perusteella nmap -sn suorittaa ping-skannauksen (Ping Sweep).
+
+Toiminta: Komento selvittää, mitkä laitteet määritellyllä verkkoalueella ovat päällä (online), mutta se ei suorita porttiskannausta.
+
+Perustelu: Jaswal korostaa tiedonkeruuvaiheessa "ping sweep" -tekniikkaa yhtenä tapana kartoittaa verkon laajuutta ennen tarkempia tutkimuksia. -sn (aiemmin -sP) lähettää ICMP-kaiku-pyyntöjä sekä TCP-paketteja (yleensä porteille 80 ja 443) nähdäkseen, vastaako kohde. Se on nopeampi ja huomaamattomampi kuin täysi porttiskannaus, koska se pysähtyy isäntien löytämiseen.
+
 ## B) Porttiskannaus ja tallennus Metasploitin tietokantaan
 
 Harjoitus aloitettiin varmistamalla, että Metasploitin PostgreSQL-tietokanta on toiminnassa (db_status). Tämän jälkeen suoritettiin versioskannaus komennolla:
@@ -201,3 +218,7 @@ https://attack.mitre.org/
 https://attack.mitre.org/tactics/TA0003/
 https://attack.mitre.org/techniques/T1189/
 https://attack.mitre.org/resources/faq/
+https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-19
+https://nmap.org/docs.html
+
+
