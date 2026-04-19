@@ -51,30 +51,37 @@ Sen jälkeen tallensin ZAPin juurisertifikaatin (CA Certificate) koneelle ja toi
 
 <img width="1267" height="448" alt="foxyproxy" src="https://github.com/user-attachments/assets/4240f015-f3b3-41aa-816e-14978783c86b" />
 
+
 - Ensiksi lisäsin FoxyProxy-lisäosan Firefoxiin.
 
 
 <img width="295" height="328" alt="foxyproxy select options" src="https://github.com/user-attachments/assets/a0e8edcc-0717-481c-aa38-581b97ae4892" />
 
+
 - Seuraavaksi avasin FoxyProxyn asetukset.
 
 <img width="748" height="536" alt="foxyproxy config" src="https://github.com/user-attachments/assets/54bb0472-e66e-4641-b4f6-eb72fc038fe6" />
+
 
 - Määritin uuden välityspalvelimen antamalla sille samat asetukset, jotka olivat ZAPissa (localhost ja portti 8080). Näin kaikki liikenne, jonka FoxyProxy nappaa, menee suoraan ZAPiin.
 
 <img width="1160" height="227" alt="foxyproxyyyyy" src="https://github.com/user-attachments/assets/537eb1cf-e2da-44a7-8334-f83c2ca86eec" />
 
+
 - Seuraavaksi piti määritellä "Proxy by Patterns". Tämä ominaisuus suodattaa kaiken muun liikenteen pois paitsi ne osoitteet, jotka on erikseen määritelty sallituksi. Testien vuoksi olin laittanut sääntöihin muutamia eri osoitteita.
 
 <img width="311" height="327" alt="select that one" src="https://github.com/user-attachments/assets/21ec8367-71f2-4fb5-9973-5ef9c3be5f90" />
+
 
 - Valitsin laajennuksesta päälle tilan "Proxy by Patterns".
 
 <img width="760" height="907" alt="portswig search" src="https://github.com/user-attachments/assets/6cf6dd4d-dac2-48bb-ab03-d67af882754e" />
 
+
 - Sitten testasin, toimiiko määritelty filtteri. Etsin selaimella PortSwiggerin sivuston sekä google.com:in.
 
 <img width="756" height="302" alt="no google" src="https://github.com/user-attachments/assets/a951e505-baa5-482b-9971-e97a70a04ae5" />
+
 
 - ZAPin historiassa ei näkynyt Googlea, joten voidaan todeta, että filtteri toimii kuten pitääkin 👍.
 
@@ -85,6 +92,7 @@ Sen jälkeen tallensin ZAPin juurisertifikaatin (CA Certificate) koneelle ja toi
 - Kunnes katsoin ZAPin vasenta sivupalkkia, jossa lukee "Sites". Klikkasin sitä ja kappas, siellä näkyy kansiopuu sivuista, joilla olin käynyt! Koska kuvat ovat ZAPin mielestä usein vain "kohinaa", se piilottaa ne oletuksena historiasta, mutta tallentaa ne silti sivupuuhun.
 
 <img width="982" height="520" alt="portswig image" src="https://github.com/user-attachments/assets/02f90d4c-0ed8-4544-8fb3-31de4ace0c47" />
+
 
 - Etsin sieltä PortSwiggerin kansion ja vuhuu, mä sain kuvan löydettyä!
 
@@ -104,6 +112,7 @@ Sen jälkeen tallensin ZAPin juurisertifikaatin (CA Certificate) koneelle ja toi
 
 ### F) File path traversal, simple case. Laita tarvittaessa Zapissa kuvien sieppaus päälle. 
 
+
 <img width="1708" height="911" alt="manipulate" src="https://github.com/user-attachments/assets/02627526-7d25-4d98-ae20-317449284acb" />
 
 
@@ -116,9 +125,11 @@ Sen jälkeen tallensin ZAPin juurisertifikaatin (CA Certificate) koneelle ja toi
 
 <img width="768" height="177" alt="select text" src="https://github.com/user-attachments/assets/e6d39eef-8adb-4e41-8ad4-7a65fe7e8ded" />
 
+
 - Koska alkuperäinen pyyntö haki kuvaa, ZAP yritti näyttää hyökkäyksen vastauksen oletuksena kuvana (mikä näyttää tyhjältä/rikkinäiseltä). Jotta näemme onnistuneen hyökkäyksen palauttaman tiedoston sisällön raakatekstinä, "Body"-näkymä piti vaihtaa asennosta "Image" asentoon "Text".
 
 <img width="877" height="422" alt="it displays all the info needed" src="https://github.com/user-attachments/assets/a6affb70-1972-48a7-872a-91ea300e96d4" />
+
 
 - Tämän jälkeen palvelimen /etc/passwd -tiedoston sisältö pärähti ruudulle!
 
