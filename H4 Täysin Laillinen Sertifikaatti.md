@@ -236,3 +236,20 @@ Sen jälkeen tallensin ZAPin juurisertifikaatin (CA Certificate) koneelle ja toi
 - Kehittäjä meni sieltä mistä aita on matalin ja tallensi chat-lokit suoraan palvelimen kiintolevylle yksinkertaisilla, juoksevilla numeroilla (1.txt, 2.txt, 3.txt). Kun huomasin url-osoitteessa tiedoston 2.txt, järjestelmän logiikka paljastui heti. Jos tiedostot olisi nimetty pitkillä satunnaisilla merkkijonoilla (esim. log_8f92A4bB.txt), toisen käyttäjän tiedoston nimeä olisi ollut lähes mahdotonta arvata.
 
 - Puuttuva käyttöoikeuksien tarkistus (Insecure): Tämä on se todellinen kohtalokas virhe. Kun pyysin palvelimelta manuaalisesti tiedostoa 1.txt, palvelin tarkisti vain kaksi asiaa: olenko kirjautunut ylipäätään sisään järjestelmään, ja onko kyseinen tiedosto olemassa kiintolevyllä. Palvelin ei kuitenkaan missään vaiheessa tarkistanut, onko minulla (nykyisellä käyttäjällä) oikeutta lukea juuri tuota kyseistä tiedostoa.
+
+
+
+## Lähteet
+
+- <a href="https://terokarvinen.com/tunkeutumistestaus/#taysin-laillinen-sertifikaatti">Tero Karvinen</a>
+- <a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">A01:2021 – Broken Access Control</a>
+- <a href="https://portswigger.net/web-security/access-control/idor">PortSwigger Academy: Insecure direct object references (IDOR)</a>
+- <a href="https://portswigger.net/web-security/file-path-traversal">PortSwigger Academy: Path traversal</a>
+- <a href="https://portswigger.net/web-security/cross-site-scripting">PortSwigger Academy: Cross-site scripting</a>
+- <a href="https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded">Reflected XSS into HTML context with nothing encoded</a>
+- <a href="https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded">Stored XSS into HTML context with nothing encoded</a>
+- <a href="https://portswigger.net/web-security/file-path-traversal/lab-simple">File path traversal, simple case</a>
+- <a href="https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass">File path traversal, traversal sequences blocked with absolute path bypass</a>
+- <a href="https://portswigger.net/web-security/file-path-traversal/lab-sequences-stripped-non-recursively">File path traversal, traversal sequences stripped non-recursively</a>
+- <a href="https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references">Insecure direct object references</a>
+
