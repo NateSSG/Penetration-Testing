@@ -129,4 +129,12 @@ Jotta nähdään mitä kaikkea haavoittuvuuksia me saatiin meidän pitää vaiht
 <img width="1715" height="791" alt="theres no i in team" src="https://github.com/user-attachments/assets/c897b0e5-583e-4810-b803-60f6a8d5f890" />
 
 
+<img width="1670" height="775" alt="view transcript" src="https://github.com/user-attachments/assets/7a439ebc-1d5d-41ae-a5ae-2d5658588fc0" />
+
+<img width="1447" height="342" alt="manipulated the file number" src="https://github.com/user-attachments/assets/8bf75e1a-6697-4d68-8400-2363e012ccbc" />
+
+<img width="1018" height="551" alt="password acquired" src="https://github.com/user-attachments/assets/10d4afd7-574c-423a-b7cb-6c68852a544c" />
+
+<img width="1702" height="636" alt="and we are in!" src="https://github.com/user-attachments/assets/42743971-ff3e-48a7-914d-76bd7e65f689" />
+
 
