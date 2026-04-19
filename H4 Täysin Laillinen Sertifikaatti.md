@@ -117,7 +117,16 @@ Jotta nähdään mitä kaikkea haavoittuvuuksia me saatiin meidän pitää vaiht
 <img width="1001" height="452" alt="lab solveeeed" src="https://github.com/user-attachments/assets/28a823c3-6126-4d3a-b22c-5d1db7d0876d" />
 
 
+<img width="1418" height="246" alt="same thing just a bit different" src="https://github.com/user-attachments/assets/936ae46e-dc45-4666-90bb-5b4bc08622e8" />
 
+<img width="565" height="533" alt="response of the same thing" src="https://github.com/user-attachments/assets/691b1904-f991-4d59-a60a-07c0569105bb" />
+<img width="1712" height="783" alt="file path traversal2" src="https://github.com/user-attachments/assets/3f93ec97-ac1b-415f-9ff6-3407c12a927f" />
+
+
+
+<img width="1425" height="135" alt="same thing just a bit different 2" src="https://github.com/user-attachments/assets/ecdfab59-b057-4558-a47c-622cd43f4e32" />
+<img width="515" height="560" alt="same thing response 2" src="https://github.com/user-attachments/assets/becee4ec-d279-4474-9124-40c9407ffb67" />
+<img width="1715" height="791" alt="theres no i in team" src="https://github.com/user-attachments/assets/c897b0e5-583e-4810-b803-60f6a8d5f890" />
 
 
 
