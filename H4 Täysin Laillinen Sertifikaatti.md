@@ -50,15 +50,15 @@
 
 ### PortSwigger Academy: Cross-site scripting
 
-Mikä se on: Haavoittuvuus, joka mahdollistaa haitallisen JavaScript-koodin suorittamisen pahaa-aavistamattoman uhrin selaimessa.
+- Mikä se on: Haavoittuvuus, joka mahdollistaa haitallisen JavaScript-koodin suorittamisen pahaa-aavistamattoman uhrin selaimessa.
 
-**Seuraukset**: Hyökkääjä voi esiintyä uhrina, tehdä toimintoja hänen puolestaan ja varastaa arkaluonteisia tietoja (kuten kirjautumistunnuksia tai istuntoevästeitä).
+- **Seuraukset**: Hyökkääjä voi esiintyä uhrina, tehdä toimintoja hänen puolestaan ja varastaa arkaluonteisia tietoja (kuten kirjautumistunnuksia tai istuntoevästeitä).
 
-**Kaksi** **päätyyppiä**: Heijastettu (Reflected, hyökkäys piilotetaan esim. uhrille lähetettävään linkkiin) ja Tallennettu (Stored, hyökkäys tallentuu pysyvästi tietokantaan kaikkien nähtäville).
+- **Kaksi** **päätyyppiä**: Heijastettu (Reflected, hyökkäys piilotetaan esim. uhrille lähetettävään linkkiin) ja Tallennettu (Stored, hyökkäys tallentuu pysyvästi tietokantaan kaikkien nähtäville).
 
-**DOM-pohjainen XSS**: Kolmas tyyppi, jossa virhe ei tapahdu palvelimella, vaan sivuston oman selainpään (client-side) JavaScriptin käsitellessä tietoa turvattomasti.
+- **DOM-pohjainen XSS**: Kolmas tyyppi, jossa virhe ei tapahdu palvelimella, vaan sivuston oman selainpään (client-side) JavaScriptin käsitellessä tietoa turvattomasti.
 
-**Ennaltaehkäisy**: Suodata ja rajoita kaikki syötteet tarkasti, koodaa tulosteet (output encoding, esim. < muotoon &lt;) ja käytä CSP-tietoturvaotsikoita (Content Security Policy).
+- **Ennaltaehkäisy**: Suodata ja rajoita kaikki syötteet tarkasti, koodaa tulosteet (output encoding, esim. < muotoon &lt;) ja käytä CSP-tietoturvaotsikoita (Content Security Policy).
 
 
 ## a) Totally Legit Sertificate. Asenna OWASP ZAP, generoi CA-sertifikaatti ja asenna se selaimeesi.
