@@ -157,3 +157,9 @@ Ensimmäinen yritys 5 000 sanan listalla ei tuottanut tuloksia koon `1495` suoda
 Päivitin sanalistan 20 000 sanan versioon (`top1million-20000.txt`), jolloin työkalu löysi välittömästi **redhat**-alidomainin. Tämä korosti sanalistojen laadun merkitystä tiedusteluvaiheessa.
 <img width="740" height="371" alt="ffuf i) 1" src="https://github.com/user-attachments/assets/b90b53ba-080e-4772-84d3-7787fbaf94a1" />
 
+
+
+- <a href="https://terokarvinen.com/tunkeutumistestaus/#fuzzy">Tero Karvinen</a>
+- <a href="https://github.com/ffuf/ffuf/blob/master/README.md">Hoikkala 2023</a>
+- <a href="https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/">Find Hidden Web Directories - Fuzz URLs with ffuf</a>
+- <a href="https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/">Fuffme - Install Web Fuzzing Target on Debian</a>
