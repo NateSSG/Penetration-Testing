@@ -14,6 +14,39 @@
 
 ## Tiivistelmä
 
+Mikä on ffuf? Erittäin nopea työkalu, jolla etsitään verkkopalvelimilta piilotettuja hakemistoja ja tiedostoja, joita ei ole linkitetty missään.
+
+Toimintaperiaate: Ohjelma kokeilee automaattisesti tuhansia eri polkuja (kuten /admin) ja analysoi palvelimen vastaukset.
+
+Sanakirjat (Wordlists): Ffuf tarvitsee tekstitiedoston (esim. common.txt), joka sisältää listan kokeiltavista sanoista.
+
+FUZZ-avainsana: Komennossa käytetään sanaa FUZZ osoittamaan paikka, johon sanakirjan sanat sijoitetaan: ffuf -w lista.txt -u http://osoite.fi/FUZZ.
+
+### Tulosten suodattaminen
+
+Joskus palvelin vastaa kaikkiin kyselyihin "200 OK", vaikka sivua ei olisi. Tällöin "kohina" pitää suodattaa pois:
+
+-fs (Filter Size): Piilottaa vastaukset tietyn tavukoon perusteella (esim. virhesivun koko).
+
+-fl (Filter Lines): Piilottaa vastaukset rivimäärän perusteella.
+
+-fw (Filter Words): Piilottaa vastaukset sanamäärän perusteella.
+
+### Hakemistojen etsintä: Etsii piilotettuja kansioita käyttämällä FUZZ-avainsanaa URL-osoitteessa.
+
+ffuf -w sanalista.txt -u http://kohde.fi/FUZZ
+
+Virtuaali-isäntien (Vhost) etsintä: Etsii alidomaineja muokkaamalla HTTP-otsikoita ilman DNS-tietueita.
+
+ffuf -w sanalista.txt -u http://kohde.fi -H "Host: FUZZ.kohde.fi" -fs 4242
+
+Parametrien fuzzaus: Etsii piilotettuja GET- tai POST-parametreja (kuten ?debug=true).
+
+ffuf -w parametrit.txt -u http://kohde.fi/sivu.php?FUZZ=testi
+
+
+
+
 ## a) Fuzzzz: dirfuz-1 -haasteen ratkaisu
 
 <img width="652" height="472" alt="ffuf" src="https://github.com/user-attachments/assets/5c36e5d8-5f77-44d1-b930-87991aa827e8" />
