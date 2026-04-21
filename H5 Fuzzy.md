@@ -79,6 +79,35 @@ Tämä tehtävä on suurin piirtein sama kuin se ensimmäinen (eli siis a) ). Ff
 
 Seuraavaksi suodatin / karsin kaikki nuo "669" kokoiset tiedostot pois ja sieltä löytyi sitten tuo "secret" niminen sivu!
 
+## g) Param Mining
 
+<img width="762" height="367" alt="ffuf g)" src="https://github.com/user-attachments/assets/7873de9d-0b5d-4f85-9df2-fd4387835077" />
+
+Tässä tehtävässä jouduin lataamaan uuden sanalistan jotta saisin tämän tehtävän ratkottua.
+
+<img width="762" height="461" alt="ffuf g) 1" src="https://github.com/user-attachments/assets/a75abe0f-5392-4679-8946-36e6898ef046" />
+
+Pistin tuon saman komennon terminaliin mutta vain uudella sanalistalla ja parametreilla. Sieltä sitten löytyi jonkinlainen debug sivu.
+
+## h) Rate Limited
+
+<img width="761" height="492" alt="ffuf h)" src="https://github.com/user-attachments/assets/7aa11101-b349-47aa-a1c0-edda767d9c3c" />
+
+Seuraavassa tehtävässä jouduin käyttämään rate limittiä, joka siis jaksottaa nämä pyynnöt ettei meitä huomata. Sitten jonkin ajan päästä löysin "oracle" nimisen sivun.
+
+## i) Subdomains - Virtual Host Enumeration
+
+<img width="760" height="547" alt="ffuf i)" src="https://github.com/user-attachments/assets/a2ff88c4-86c8-4976-861b-4f064a0544d7" />
+
+
+Käytin tässä tehtävässä tuota "top1million-5000.txt" tiedostoa jossa on 5000 eri sanaa / osumaa. Ffufasin sen alisivun ja olin suodattanut melun pois ja se ei palauttanut yhtään mitään. 
+
+<img width="757" height="317" alt="ffuf i) 2" src="https://github.com/user-attachments/assets/f09b097d-5075-4cb0-a8fb-296adf2d508f" />
+
+Ajattelin että ehkä komennossa oli jotain väärin, mutta sitten päädyin siihen tulokseen, että ehkä sanoja / osumia ei ollut tarpeeksi, joten latasin "top1million-20000.txt" tiedoston ja ajoin komennon uudestaan.
+
+<img width="740" height="371" alt="ffuf i) 1" src="https://github.com/user-attachments/assets/b90b53ba-080e-4772-84d3-7787fbaf94a1" />
+
+Voidaan todeta, että ongelma oli sanalistassa, koska nyt heti sieltä löyty joku sivu!
 
 
