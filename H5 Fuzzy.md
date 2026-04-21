@@ -39,4 +39,6 @@ Seuraavaksi curlasin sivun ja kappas vain sieltä löytyi lippu!
 
 ## Fuff me. Asenna FuffMe-harjoitusmaali. Karvinen 2023
 
+<img width="742" height="607" alt="ffuf me website home page" src="https://github.com/user-attachments/assets/b3de087e-5eeb-4312-acd5-abd5d833e8d9" />
+
 Käytin tehtäväannossa Tero Karvisen laatimaa ohjetta FuffMe-harjoitusmaalin asentamiseen joka löytyy tästä osoitteest: https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/
