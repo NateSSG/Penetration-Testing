@@ -19,11 +19,14 @@
 <img width="652" height="472" alt="ffuf" src="https://github.com/user-attachments/assets/5c36e5d8-5f77-44d1-b930-87991aa827e8" />
 
 ### Vaihe 1: Sanalistan ja maalin valmistelu
+
 Ensimmäiseksi latasin kattavan sanalistan (`common.txt`), joka toimii hyökkäyksen "polttoaineena".
 
 <img width="647" height="392" alt="terokarvinen fuzz" src="https://github.com/user-attachments/assets/ae118bf0-e139-429d-96d1-b56e2a56188f" />
 
+
 Latasin maalitiedoston (`dirfuzt-1`), annoin sille suoritusoikeudet (`chmod u+x`) ja käynnistin palvelimen porttiin 8000.
+
 
 ### Vaihe 2: Kohinan suodatus (Filtering)
 Ensimmäinen ajo ilman suodattimia osoitti tyypillisen haasteen: palvelin palauttaa useimmille pyynnöille saman vastauksen (kuten "404 Not Found"). Huomasin, että suurin osa vastauksista oli kooltaan **28** tai **154** tavua. Tämä "kohina" peittää alleen todelliset löydökset.
@@ -36,6 +39,7 @@ Ajoin komennon uudelleen käyttäen `-fs 28,154` (Filter Size) -lippua. Tämä o
 <img width="765" height="622" alt="wp-admin" src="https://github.com/user-attachments/assets/1b453a84-a145-406b-b9b9-8302889d6f13" />
 
 Lopuksi varmistin löydöksen `curl`-komennolla, jolloin sivuston sisältä paljastui tehtävän "lippu" (flag).
+
 <img width="611" height="270" alt="curl the website" src="https://github.com/user-attachments/assets/761aa992-c20d-4fb3-b840-fc013bef8ac1" />
 
 ---
