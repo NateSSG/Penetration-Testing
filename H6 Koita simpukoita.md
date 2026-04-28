@@ -137,3 +137,7 @@ Suoritettiin komennot (`whoam`), (`ls`) sekä (`info`)
 ## Lähteet
 
 - <a href="https://terokarvinen.com/tunkeutumistestaus/#h6-koita-simpukoita">Tero Karvinen</a>
+- <a href="https://sliver.sh/tutorials">Sliver Tutorials</a>
+- <a href="https://www.kali.org/tools/sliver/">Kali Sliver</a>
+- <a href="https://www.offsec.com/metasploit-unleashed/msfvenom/">Msfvenom docs</a>
+- <a href="https://github.com/frizb/MSF-Venom-Cheatsheet">Msfvenom Cheatsheet</a>
