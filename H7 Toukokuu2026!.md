@@ -208,3 +208,9 @@ Sääntöjen käyttö on kriittistä murtamisessa, koska se säästää levytila
 
 ## Lähteet
 https://stackoverflow.com/questions/20129029/a-light-solution-to-convert-text-to-pdf-in-linux
+
+- <a href="https://stackoverflow.com/questions/20129029/a-light-solution-to-convert-text-to-pdf-in-linux">Stack Overflow</a>
+- <a href="https://terokarvinen.com/tunkeutumistestaus/#h7-toukokuu2026">Tero Karvinen</a>
+- <a href="https://qpdf.readthedocs.io/en/stable/cli.html#encryption-options">qpdf docs</a>
+- <a href="https://terokarvinen.com/2022/cracking-passwords-with-hashcat/">Tero Karvinen Hashcat</a>
+- <a href="https://terokarvinen.com/2023/crack-file-password-with-john/">Tero Karvinen John</a>
