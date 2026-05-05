@@ -1,3 +1,4 @@
 # Penetration-testing-course
 
-Homework reports for Network Attacks course taught by Tero Karvinen
+Homework reports for Penetration-testing course taught by Tero Karvinen
+ 
