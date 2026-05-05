@@ -14,6 +14,30 @@
 
 ### Network: NAT / Host-Only
 
+## Tiivistelmä 
+
+- Salasanojen tallennus: Järjestelmät eivät tallenna salasanoja selkokielisinä, vaan niistä luodaan "hasheja" eli tiivisteitä.
+
+- Tiivisteen luonne: Tiiviste on yksisuuntainen funktio, eli sitä ei voi laskea matemaattisesti takaisin alkuperäiseksi salasanaksi.
+
+- Murtamisen periaate: Murtaminen perustuu siihen, että tietokone laskee sanakirjan jokaisesta sanasta tiivisteen ja vertaa, täsmääkö se kohdetiivisteeseen.
+
+- Työkalun käyttö: Hashcat-ohjelmalla määritetään tiivisteen tyyppi (esim. MD5) ja käytetään sanastoa (kuten RockYou), josta ohjelma etsii vastaavuutta.
+
+- Tehokkuus: Murtamista voi nopeuttaa merkittävästi käyttämällä virtuaalikoneen sijaan oikeaa laitteistoa ja näytönohjainta (GPU).
+
+- John the Ripperin tarkoitus: Ohjelma on suunniteltu murtamaan salasanasuojattuja tiedostoja sanakirjahyökkäyksen avulla.
+
+- Jumbo-version edut: Artikkelissa suositellaan "Jumbo"-version kääntämistä lähdekoodista, sillä se tukee huomattavasti laajempaa määrää tiedostoformaatteja kuin tavalliset paketinhallinnan versiot.
+
+### Kaksivaiheinen murtamisprosessi:
+
+- Tiivisteen louhinta: Tiedostosta (esim. ZIP) erotetaan ensin tiiviste (hash) erillisellä työkalulla, kuten zip2john.
+
+- Murtaminen: Varsinainen John-ohjelma suorittaa murtamisen luodulle tiivistetiedostolle.
+
+**Laaja formaattituki**: John the Ripper kykenee murtamaan satoja eri tiedostoformaatteja, kuten PDF-dokumentteja, Office-tiedostoja, iTunes-varmuuskopioita ja SSH-avaimia.
+
 ## a) Asenna Hashcat ja testaa sen toiminta murtamalla esimerkkisalasana.
 
 <img width="266" height="41" alt="hashcat installation" src="https://github.com/user-attachments/assets/f0180ea2-a3bd-408b-b73c-12b886773e8e" />
