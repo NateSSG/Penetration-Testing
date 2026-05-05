@@ -129,6 +129,25 @@ Mursin PDF:n Johnilla
 
 ## Tiiviste
 
+_Alkuperäinen suunnitelma Linux-käyttäjän murtamisesta hylättiin teknisten haasteiden vuoksi (Yescrypt-algoritmin yhteensopivuus). Sen sijaan demonstroin John the Ripperin kykyä murtaa suoria matemaattisia tiivisteitä, joita käytetään usein verkkopalveluiden tietokannoissa._
+
+<img width="535" height="42" alt="md5 print" src="https://github.com/user-attachments/assets/624a81d0-6544-480d-9a2d-3c23a163dd62" />
+
+Generoin MD5-tiivisteen sanasta "secret123" ja tallensin sen tiedostoon. Käytin awk-komentoa poimimaan vain itse tiivisteen tiedostoon.
+
+```bash
+echo -n "secret123" | md5sum | awk '{print $1}' > md5_test.hash
+```
+
+<img width="643" height="367" alt="hash been cracked" src="https://github.com/user-attachments/assets/90562815-82b7-4ed7-9dfe-27c3765054c2" />
+
+Mursin tiivisteen Johnilla. Tässä vaiheessa on tärkeää kertoa Johnille oikea formaatti (--format=Raw-MD5), koska kyseessä ei ole tiedostomuoto vaan raaka tiiviste.
+
+```bash
+~/john/run/john --format=Raw-MD5 md5_test.hash
+```
+Vahvistin tuloksen: salasana **secret123** murtui välittömästi.
+
 
 ## Lähteet
 https://stackoverflow.com/questions/20129029/a-light-solution-to-convert-text-to-pdf-in-linux
