@@ -93,7 +93,7 @@ sudo apt-get install qpdf
 <img width="750" height="605" alt="pandoc" src="https://github.com/user-attachments/assets/f9258967-9f75-453c-9b47-d5646477eda6" />
 
 
-huomasin että tämä vaatii siis sen että txt tiedosto onkin pdf. qpdf ei toimi txt tiedostosta pdf:ään joten se piti convertoida pdf:ksi. Selailin nettiä ja päädyin tällaiseen stackoverflow keskusteluun, jossa eräs käyttäjä oli maininnut tästä pandoc ohjelmasta, joten päätin kokeilla sitä.
+Havaitsin, että `qpdf`-työkalu vaatii sisääntulotiedostolta PDF-formaattia, eikä se tue suoraa salausta tekstiedostosta `(.txt)`. Tämän vuoksi tiedosto oli ensin muunnettava PDF-muotoon. StackOverflow-keskustelujen pohjalta päädyin hyödyntämään `pandoc`-ohjelmaa, joka on monipuolinen työkalu dokumenttien väliseen konversioon. Ohjelma mahdollisti tekstisisällön siirtämisen PDF-säiliöön, minkä jälkeen salauksen viimeistely `qpdf`:llä onnistui ongelmitta.
 
 
 <img width="318" height="93" alt="pandoc file conversion" src="https://github.com/user-attachments/assets/69d20f8d-f5e4-47e9-ac2d-e75b531ba536" />
@@ -147,6 +147,39 @@ Mursin tiivisteen Johnilla. Tässä vaiheessa on tärkeää kertoa Johnille oike
 ~/john/run/john --format=Raw-MD5 md5_test.hash
 ```
 Vahvistin tuloksen: salasana **secret123** murtui välittömästi.
+
+## Sanakirja
+
+<img width="930" height="676" alt="deepseek reject" src="https://github.com/user-attachments/assets/837bcf6f-e02c-4a4b-a573-b4bce3a65536" />
+
+<img width="903" height="481" alt="deepseek accept" src="https://github.com/user-attachments/assets/14122431-b7e8-4db1-8468-7e5761b5b6e2" />
+
+<img width="897" height="625" alt="deepseek print" src="https://github.com/user-attachments/assets/8c6ff454-ad76-4493-8a37-e4ee7d8ae5e2" />
+
+<img width="246" height="97" alt="micro " src="https://github.com/user-attachments/assets/d3f14600-8170-4abc-ad91-38bb826d601d" />
+
+Loin kustomoidun sanakirjan `nateswords.txt` käyttämällä  `micro`-editoria. Hyödynsin sanaston rakentamisessa tekoälyä (DeepSeek) ja sosiaalisen hakkeroinnin periaatteita: ohjeistin tekoälyn listaamaan tyypillisiä heikkoja salasanoja sekä kohteelle ominaisia termejä, kuten urheilujoukkueita ja vuosilukuja. Tämä osoittaa, kuinka kohdennettu sanasto on usein massiivista yleislistaa (kuten rockyou.txt) tehokkaampi tapa murtaa salasanoja, kun kohteesta on käytettävissä taustatietoa.
+
+
+<img width="647" height="123" alt="nates words crack" src="https://github.com/user-attachments/assets/a8fdf040-a7a1-4de9-8aa2-6b57eac10f92" />
+
+
+Mursin testi-MD5-tiivisteen käyttämällä juuri luomaani omaa sanakirjaa.
+ 
+```bash
+~/john/run/john --wordlist=nateswords.txt --format=Raw-MD5 md5_test.hash
+```
+<img width="585" height="96" alt="baseball" src="https://github.com/user-attachments/assets/f751deec-e6a7-44c6-b8c6-80856c80bffd" />
+
+Lopuksi demonstroin sääntöjen (Rules) voiman. Käytin Johnin --rules -vipua, joka muokkaa sanakirjan sanoja lennossa (lisää isoja kirjaimia, numeroita ja erikoismerkkejä). Ohjelma mursi salasanan Baseball1, vaikka sanakirjassa oli vain pienellä kirjoitettu "baseball"
+
+
+<img width="655" height="327" alt="baseball cracked" src="https://github.com/user-attachments/assets/2ebf8cdd-6149-4cdc-92e1-a03bcff6e760" />
+
+```bash
+~/john/run/john --wordlist=nateswords.txt --rules --format=Raw-MD5 rule_test.hash
+```
+Sääntöjen käyttö on kriittistä murtamisessa, koska se säästää levytilaa ja mallintaa sitä, kuinka ihmiset tyypillisesti muokkaavat perussanoja monimutkaisemmiksi.
 
 
 ## Lähteet
