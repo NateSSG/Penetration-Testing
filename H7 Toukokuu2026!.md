@@ -78,14 +78,56 @@ Suoritin murtamisen John the Ripperillä käyttämällä sanastohyökkäystä (d
 
 Vahvistin tuloksen --show -komennolla: salasana oli butterfly. John on erityisen vahva juuri tällaisten tiedostosäilöjen murtamisessa.
 
+## Tiedosto
+
+<img width="240" height="42" alt="qpdf" src="https://github.com/user-attachments/assets/3ec20531-0622-4c8f-9fe4-fbce98d7f6bd" />
+
+Asensin `qpdf`-työkalun, jota käytetään PDF-tiedostojen muokkaamiseen ja salaamiseen.
+
+```bash
+sudo apt-get install qpdf
+```
+
+<img width="647" height="343" alt="errorrrr" src="https://github.com/user-attachments/assets/1571c79d-220e-4a74-9e00-c04ceb11e932" />
+
+<img width="750" height="605" alt="pandoc" src="https://github.com/user-attachments/assets/f9258967-9f75-453c-9b47-d5646477eda6" />
 
 
+huomasin että tämä vaatii siis sen että txt tiedosto onkin pdf. qpdf ei toimi txt tiedostosta pdf:ään joten se piti convertoida pdf:ksi. Selailin nettiä ja päädyin tällaiseen stackoverflow keskusteluun, jossa eräs käyttäjä oli maininnut tästä pandoc ohjelmasta, joten päätin kokeilla sitä.
 
 
+<img width="318" height="93" alt="pandoc file conversion" src="https://github.com/user-attachments/assets/69d20f8d-f5e4-47e9-ac2d-e75b531ba536" />
+
+Sitten muunsin aiemmin luomani secret.txt -tiedoston PDF-muotoon juuri ladatulla pandoc-ohjelmalla.
+
+```bash
+pandoc secret.txt -o my_test.pdf
+```
+
+<img width="951" height="787" alt="qpdf doc" src="https://github.com/user-attachments/assets/f1fe5e59-5887-4fa8-b267-45092140ca94" />
+
+Kävin katsomassa qpdf dokumentaatiota ja sieltä löytyi esimerkki miten salataan pdf tiedosto.
+
+<img width="606" height="92" alt="encrypted my pdf" src="https://github.com/user-attachments/assets/4be9de0d-6861-4e9a-9ad8-9468d10e18b7" />
 
 
+Salasin PDF-tiedoston AES-256 -salauksella käyttäen salasanaa "secret123".
 
+```bash
+qpdf --encrypt secret123 secret123 256 -- my_test.pdf my_encrypted.pdf
+```
 
+<img width="355" height="91" alt="converting pdf to hash" src="https://github.com/user-attachments/assets/761141d3-62f6-45bd-8900-762b7115e212" />
+
+```bash
+pdf2john my_encrypted.pdf > my_pdf.hash
+```
+
+<img width="648" height="418" alt="password cracked" src="https://github.com/user-attachments/assets/b7363432-ea20-491f-b790-e42d87231f5a" />
+
+Mursin PDF:n Johnilla
+
+## Tiiviste
 
 
 ## Lähteet
